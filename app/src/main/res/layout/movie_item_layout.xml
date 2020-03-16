@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_4dp"
+    app:cardBackgroundColor="@color/appDarkGrey"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="@dimen/dimen_2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/movie_poster_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/popcorn_imagview"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:elevation="@dimen/dimen_4dp"
+            android:src="@drawable/ic_popcorn_icon"
+            app:layout_constraintTop_toTopOf="@id/guideline"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_title_textview"
+            style="@style/HeaderText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textAlignment="viewEnd"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            app:layout_constraintVertical_weight=".7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/popcorn_imagview"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            app:layout_constraintBottom_toTopOf="@id/release_date_textview"
+            tools:text="Movie Title and another movie title for no explicit reason just for the sake of having a long title" />
+
+        <TextView
+            android:id="@+id/release_date_textview"
+            style="@style/InfoText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="bottom|end"
+            app:layout_constraintVertical_weight=".3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/popcorn_imagview"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title_textview"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            tools:text="Movie Title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".85"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/appBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HeaderText">
+        <item name="fontFamily">@font/oxygen_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/appWhite</item>
+    </style>
+
+    <style name="BodyText" parent="HeaderText">
+        <item name="fontFamily">@font/oxygen_regular</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="InfoText" parent="HeaderText">
+        <item name="fontFamily">@font/oxygen_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
